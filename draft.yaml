@@ -1,0 +1,25 @@
+models:
+  Mahasiswa:
+    nim: integer
+    nama: text
+    nik: text
+    jk: string
+    nama_ibu: text
+    agama: string
+    tempat_lahir: string
+    tanggal_lahir: date
+    alamat: text
+    hp: text
+    email_kampus: text
+    email_pribadi: text
+    tahun_masuk: string
+
+  Alumni:
+    mahasiswa_id: foreign
+    tahun_lulus: string
+    ipk: double
+    lama_studi: string
+    keterangan: text
+
+controllers:
+  # ...

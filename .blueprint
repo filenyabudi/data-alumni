@@ -1,0 +1,11 @@
+created:
+    - database/factories/MahasiswaFactory.php
+    - database/factories/AlumniFactory.php
+    - database/migrations/2025_02_12_042855_create_mahasiswas_table.php
+    - database/migrations/2025_02_12_042856_create_alumnis_table.php
+    - app/Models/Mahasiswa.php
+    - app/Models/Alumni.php
+models:
+    User: { name: string, email: string, email_verified_at: 'timestamp nullable default:NULL', password: string, remember_token: 'string:100 nullable default:NULL' }
+    Mahasiswa: { nim: integer, nama: text, nik: text, jk: string, nama_ibu: text, agama: string, tempat_lahir: string, tanggal_lahir: date, alamat: text, hp: text, email_kampus: text, email_pribadi: text, tahun_masuk: string }
+    Alumni: { mahasiswa_id: foreign, tahun_lulus: string, ipk: double, keterangan: text }
